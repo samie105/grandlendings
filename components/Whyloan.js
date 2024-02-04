@@ -3,57 +3,28 @@
  * @see https://v0.dev/t/F9wtd9ySdNo
  */
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card";
+import { UtensilsIcon } from "lucide-react";
 
 export default function Component() {
   return (
     <main>
       <header className="container mx-auto px-6 py-10 text-center">
         <h1 className="text-3xl font-semibold mb-2">Grandlendings Can Help</h1>
-        <h2 className="text-sm text-gray-600">With Expenses Like:</h2>
+        {/* <h2 className="text-sm text-gray-600">With Expenses Like:</h2> */}
       </header>
       <section className="container mx-auto px-6 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
             <div className="flex items-center gap-2 text-purple-800">
-              <HotelIcon className="w-5 h-5" />
+              <HomeIcon className="w-5 h-5" />
               <CardTitle className="text-base text-purple-800">
-                Hospital Bills
+                Rent Assistance
               </CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-gray-600">
-              Pay for your medical expenses without any stress.
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
-          <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
-              <MicrowaveIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
-                New Appliances
-              </CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-gray-600">
-              Get the appliances you need for your home with ease.
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
-          <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
-              <WrenchIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
-                Car Repairs
-              </CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-gray-600">
-              Fix your car without worrying about the bill.
+              Receive support for your rental expenses without added stress.
             </p>
           </CardContent>
         </Card>
@@ -62,45 +33,48 @@ export default function Component() {
             <div className="flex items-center gap-2 text-purple-800">
               <HomeIcon className="w-5 h-5" />
               <CardTitle className="text-base text-purple-800">
-                Home Keepings
+                Essential Utilities
               </CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-gray-600">
-              Maintain your home without stressing about the cost.
+              Ensure your home has the necessary utilities with ease.
             </p>
           </CardContent>
         </Card>
         <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
             <div className="flex items-center gap-2 text-purple-800">
-              <PlaneIcon className="w-5 h-5" />
+              <WrenchIcon className="w-5 h-5" />
               <CardTitle className="text-base text-purple-800">
-                Travel Expenses
+                Maintenance Support
               </CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-gray-600">
-              Cover your travel costs and enjoy your trips without financial
-              worries.
+              Get assistance for home maintenance without worrying about costs.
             </p>
           </CardContent>
         </Card>
-        <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
+        {/* <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
             <div className="flex items-center gap-2 text-purple-800">
-              <CreditCardIcon className="w-5 h-5 " />
-              <CardTitle className="text-base ">Credit Card</CardTitle>
+              <HomeIcon className="w-5 h-5" />
+              <CardTitle className="text-base text-purple-800">
+                Medical Expenses
+              </CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-gray-600">
-              Manage your credit card expenses effectively and avoid debt.
+              Cover medical expenses and focus on your health without financial
+              concerns.
             </p>
           </CardContent>
-        </Card>
+        </Card> */}
+        {/* Additional Cards */}
       </section>
     </main>
   );

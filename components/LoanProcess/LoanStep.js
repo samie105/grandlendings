@@ -22,23 +22,23 @@ export default function LoanStep() {
             </StepCard>
             <StepCard stepNumber="3" stepName="GET FUNDS TRANSFERRED">
               If you accepted your loan terms on a Monday through Friday, before
-              11:30 a.m. CT, Grandlendings will transfer the money to your bank
-              by the end of the business day. If you accepted your loan terms on
-              a Monday through Thursday between 11:30 a.m. CT and 8 p.m. CT,
-              Grandlendings will transfer your funds to your bank overnight. If
-              you accepted your loan terms on a Friday after 11:30 a.m. CT
-              through anytime on Sunday, Grandlendings will transfer your money
-              over the weekend and it will arrive at your bank by the end of the
-              next business day.
+              11:30 a.m. CT, EmergencyRentalAssistance will transfer the money
+              to your bank by the end of the business day. If you accepted your
+              loan terms on a Monday through Thursday between 11:30 a.m. CT and
+              8 p.m. CT, EmergencyRentalAssistance will transfer your funds to
+              your bank overnight. If you accepted your loan terms on a Friday
+              after 11:30 a.m. CT through anytime on Sunday, Emergency Rental
+              Assistance will transfer your money over the weekend and it will
+              arrive at your bank by the end of the next business day.
             </StepCard>
           </div>
         </div>
         <div className="text-container w-full justify-center items-center py-10 md:px-24 px-12 lg:px-36">
           <p className="font-semibold text-gray-600">
-            Grandlendings is a better way to borrow extra money when you need
-            it. It’s not a payday loan. It’s an installment loan, which means
-            you pay down the balance with each on-time payment. Borrow up to
-            $1500 (up to $800 for new and repeat borrowers, up to $1500 for
+            EmergencyRentalAssistance is a better way to borrow extra money when
+            you need it. It’s not a payday loan. It’s an installment loan, which
+            means you pay down the balance with each on-time payment. Borrow up
+            to $1500 (up to $800 for new and repeat borrowers, up to $1500 for
             preferred customers with 10 or more loans). Then, pay us back a
             little at a time.
           </p>

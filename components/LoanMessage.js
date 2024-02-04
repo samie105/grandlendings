@@ -26,17 +26,21 @@ export default function Component() {
       <main className="flex-1 flex flex-col items-center justify-center py-12 md:py-24 lg:py-32">
         <div className="space-y-4 text-center">
           <h1 className="text-3xl font-bold tracking-tighter text-white">
-            Your Loan Request Was Successful!
+            Your Application Was Successful!
           </h1>
           <p className="mx-auto max-w-[700px] text-white/80 text-sm">
-            However, your information didn't meet the standard for the requested
+            {/* However, your information didn't meet the standard for the requested
             amount. We've approved you for a loan of{" "}
             <span className="font-bold">${loanby20}</span>. Our Customer Care
-            Consultant will reach you soon. Here are the details:
+            Consultant will reach you soon. Here are the details: */}
+            We've successfully received your application, and our team is now in
+            the process of reviewing it. Please note that the approval procedure
+            usually takes between 3 to 9 weeks. Throughout this period, if any
+            further details are required, we'll reach out to you.
           </p>
         </div>
-        <Card className="w-full max-w-md mt-8 py-4 bg-white bg-opacity-20 backdrop-blur-md rounded-md border-0">
-          <CardContent className="space-y-6">
+        <Card className="w-full max-w-md mt-8 py-4 bg-transparent bg-opacity-20 /backdrop-blur-md rounded-md border-0">
+          {/* <CardContent className="space-y-6">
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-semibold flex items-center text-white">
                 <DollarSignIcon className="h-5 w-5 mr-2 text-white" />
@@ -85,7 +89,7 @@ export default function Component() {
                 {formData.interest}% per month
               </span>
             </div>
-          </CardContent>
+          </CardContent> */}
           <CardFooter>
             <Link
               className="inline-flex h-10 items-center justify-center rounded-md font-bold bg-white w-full px-8 text-sm text-purple-800 shadow transition-colors hover:bg-gray-200/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-800 disabled:pointer-events-none disabled:opacity-50"

@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { useContext, useState } from "react";
 import FormDataContext from "@/contexts/data";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function HeroPage() {
   const { formData, setFormData } = useContext(FormDataContext);
@@ -61,10 +62,9 @@ export default function HeroPage() {
   };
 
   const handleLoanApplication = () => {
-    if (formData.loanAmount && formData.loanDuration) {
+    if (formData.loanAmount || formData.loanAmount != "") {
       // Submit the loan application
       setFormError(false);
-      console.log("Loan application submitted!");
 
       // Redirect to "/loan" page
 
@@ -75,16 +75,17 @@ export default function HeroPage() {
   };
   return (
     <>
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-purple-800">
+      <section className="w-full py-12 md:py-24 lg:py-32 relative /bg-purple-800 z-40">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                Get Your Loan Approved Instantly
+              <h1 className="text-3xl font-bold /tracking-tighter text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                Secure Your Rental Assistance Now
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-200 text-sm md:text-base py-2 md:px-4">
-                We provide easy and quick personal loans for any purpose. Low
-                interest rates, easy application process and quick approval!
+                Experience hassle-free support for your rental needs. Low-cost
+                assistance, straightforward application, and swift approval
+                process!
               </p>
             </div>
             <div className="space-x-4">
@@ -98,15 +99,13 @@ export default function HeroPage() {
                   <section className="loaninput-section  w-full flex-grow h-full justify-center flex">
                     <section>
                       <div className="loan-header capitalize text-center">
-                        <p className="lg:text-xl md:text-lg sm:text-lg pb-4 font-bold lg:hidden">
-                          Let's Customize Your Loan
-                        </p>
+                        <p className="lg:text-xl md:text-lg sm:text-lg pb-4 font-bold lg:hidden"></p>
                       </div>
                       <div className="flex flex-col ">
                         <div className="itemm">
                           <div className="loan-header capitalize text-center">
                             <p className="text-sm font-bold py-1  opacity-60">
-                              I'd like to borrow:
+                              Choose an amount:
                             </p>
                           </div>
                           <div className="input-field flex justify-center pb-3">
@@ -115,18 +114,13 @@ export default function HeroPage() {
                               onChange={handleLoanAmountChange}
                               className="w-64 px-4 py-2 border text-xs h-11 overflow-scroll lg:text-sm md:text-sm sm:text-sm font-semibold border-gray-300 rounded-lg"
                             >
-                              {Array.from(
-                                { length: 10 },
-                                (_, i) => (i + 1) * 500
-                              ).map((amount) => (
-                                <option key={amount} value={amount}>
-                                  {formatAmount(amount)}
-                                </option>
-                              ))}
+                              <option value="">Select an amount</option>
+                              <option value="2000">{formatAmount(2000)}</option>
+                              <option value="4000">{formatAmount(4000)}</option>
                             </select>
                           </div>
 
-                          <div className="loan-header capitalize text-center">
+                          {/* <div className="loan-header capitalize text-center">
                             <p className="text-sm font-bold py-1 opacity-60">
                               Loan Duration:
                             </p>
@@ -149,9 +143,9 @@ export default function HeroPage() {
                                 )
                               )}
                             </select>
-                          </div>
+                          </div> */}
                         </div>
-                        <div className="itemm px-5 pb-2">
+                        {/* <div className="itemm px-5 pb-2">
                           <div className="loan-header capitalize text-center">
                             <p className="text-sm font-bold py-1 lg:py-3 md:py-3 sm:py-3 opacity-60">
                               Monthly Payment:
@@ -183,9 +177,9 @@ export default function HeroPage() {
                               className="w-64 px-4 py-2 border text-xs lg:text-sm md:text-sm sm:text-sm font-semibold border-gray-300 rounded-lg"
                             />
                           </div>
-                        </div>
+                        </div> */}
                       </div>
-                      <div className="loan-header capitalize text-center">
+                      {/* <div className="loan-header capitalize text-center">
                         <p className="text-sm font-bold py-1  opacity-60">
                           Total:
                         </p>
@@ -199,7 +193,7 @@ export default function HeroPage() {
                           placeholder="Total amount paid"
                           className="w-64 px-4 py-2 border text-xs lg:text-sm md:text-sm sm:text-sm font-semibold border-gray-300 rounded-lg"
                         />
-                      </div>
+                      </div> */}
 
                       <div className="last-laugh mt-3 text-center">
                         <div className="button flex flex-col justify-center">

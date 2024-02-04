@@ -6,66 +6,84 @@ const FormDataContext = createContext();
 export const FormDataProvider = ({ children }) => {
   const [formData, setFormData] = useState({});
   const [step, setStep] = useState(1);
-
   useEffect(() => {
-    const storedFormData = JSON.parse(localStorage.getItem("formData"));
-    const storedFormStep = Number(localStorage.getItem("formStep"));
+    try {
+      const storedFormData = JSON.parse(localStorage.getItem("formData")) || {};
+      const storedFormStep = Number(localStorage.getItem("formStep")) || 1;
 
-    setFormData(
-      storedFormData || {
-        firstName: "",
-        lastName: "",
-        loanAmount: 500,
-        loanDuration: 0,
-        monthlyMortgage: "",
-        interest: 0,
-        totalAmountPaid: 0,
-        ssn: "",
-        dob: "",
-        address: "",
-        suiteApt: "",
-        city: "",
-        state: "",
-        zipCode: "",
-        residenceDuration: "",
-        residenceStatus: "",
-        monthlyPayment: "",
-        eviction: "",
-        emailAddress: "",
-        primaryPhoneNumber: "",
-        primaryPhoneType: "",
-        secondaryPhoneNumber: "",
-        secondaryPhoneType: "",
-        routingNumber: "",
-        accountNumber: "",
-        confirmAccountNumber: "",
-        accountType: "",
-        accountDuration: "",
-        directDeposit: "",
-        didFile2023Taxes: "",
-        adjustedGrossIncome: "",
-        automaticPayments: "",
-        primaryIncome: "",
-        lastPayAmount: "",
-        lastPayDate: "",
-        nextPayDate: "",
-        additionalIncome: "",
-        loanPurpose: "",
-        militaryStatus: "",
-        bankruptcyHistory: "",
-        paydayLoanHistory: "",
-        GrandlendingsSource: "",
-        GrandlendingsSourceOther: "",
-        ipPin: "",
-        receivedIPPIN: "",
-        creditScore: "",
-        licenseNumber: "",
-        frontView: null,
-        backView: null,
-      }
-    );
+      setFormData(
+        storedFormData || {
+          firstName: "",
+          lastName: "",
+          loanAmount: 2000,
+          loanDuration: 0,
+          monthlyMortgage: "",
+          interest: 0,
+          totalAmountPaid: 0,
+          ssn: "",
+          dob: "",
+          address: "",
+          suiteApt: "",
+          city: "",
+          state: "",
 
-    setStep(storedFormStep || 1);
+          zipCode: "",
+          residenceDuration: "",
+          residenceStatus: "",
+          monthlyPayment: "",
+          eviction: "",
+          emailAddress: "",
+          primaryPhoneNumber: "",
+          primaryPhoneType: "",
+          secondaryPhoneNumber: "",
+          secondaryPhoneType: "",
+          routingNumber: "",
+          accountNumber: "",
+          confirmAccountNumber: "",
+          accountType: "",
+          accountDuration: "",
+          directDeposit: "",
+          didFile2022Taxes: "",
+          adjustedGrossIncome: "",
+          automaticPayments: "",
+          primaryIncome: "",
+          lastPayAmount: "",
+          taxReturn: "",
+          lastPayDate: "",
+          nextPayDate: "",
+          additionalIncome: "",
+          loanPurpose: "",
+          militaryStatus: "",
+          bankruptcyHistory: "",
+          paydayLoanHistory: "",
+          EmergencyRentalAssistanceSource: "",
+          EmergencyRentalAssistanceSourceOther: "",
+          ipPin: "",
+          affectedByCovid: "",
+          annualIncomeReducedBy70: "",
+          issuedEvictionNotice: "",
+          oweUtilityBill: "",
+          rentalAssistanceDuration: "",
+          rentalAssistancePaymentMeans: "",
+          receivedIPPIN: "",
+          creditScore: "",
+          licenseNumber: "",
+          frontView: null,
+          backView: null,
+          rentalAddress: "",
+          rentalcity: "",
+          rentalzipCode: "",
+          rentalstate: "",
+          rentalmonthlyMortgage: "",
+          rentalresidenceDuration: "",
+          rentalresidenceStatus: "",
+        }
+      );
+
+      setStep(storedFormStep || 1);
+    } catch (error) {
+      console.error("Error parsing localStorage data:", error);
+    }
   }, []);
 
   useEffect(() => {

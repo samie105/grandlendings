@@ -22,13 +22,13 @@ function Navbar() {
       >
         <div className="flex items-center px-3 py-5 ">
           <nav className="flex w-full justify-between items-center">
-            <div className="LogoSide font-bold ml-5 text">
+            <div className="LogoSide font-bold lg:pl-3 max-w-[30vh]">
               <Image
-                alt="Grandlendings"
                 src="/assets/GLlogo.png"
+                alt=""
                 width={1000}
                 height={1000}
-                className="w-auto h-10"
+                className="w-full h-12 object-contain"
               />
             </div>
             <div

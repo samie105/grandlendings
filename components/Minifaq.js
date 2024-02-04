@@ -11,24 +11,27 @@ import { Button } from "./ui/button";
 // FAQ data
 const faqData = [
   {
-    question: "Why an Online Installment Loan?",
+    question: "Why Opt for Emergency Rental Assistance?",
     answer:
-      "Consumers have multiple types of loans from which to choose, including home loans, car loans, credit card advances, and home equity loans. Online installment loans are designed to help when you need a short-term loan fast and have bad credit or even no credit.Consider an online installment loan if you’re short on money, don’t have other credit options, and need help with expenses.",
+      "Emergency Rental Assistance is dedicated to providing swift and dependable financial support for individuals facing housing challenges. If you're dealing with imminent rental payments, utility bills, or other housing-related expenses, our assistance is tailored to offer quick relief. This service is particularly helpful for those with challenging credit histories or limited financial options.",
   },
   {
-    question: "How long does the application process take?",
+    question:
+      "What's the Timeline for the Emergency Rental Assistance Application Process?",
     answer:
-      "The application process is fast as it is done completely online. Most people complete the process in about 10 minutes.If you accepted your loan terms on a Monday through Friday, before 11:30 a.m. CT, Grandlendings will transfer the money to your bank by no later than the end of the same business day. If you accepted your loan terms on a Monday through Thursday between 11:30 a.m. CT and 8 p.m. CT, Grandlendings will transfer your funds to your bank overnight. If you accepted your loan terms on a Friday after 11:30 a.m. CT through anytime on Sunday, Grandlendings will transfer your money over the weekend and it will arrive at your bank by the end of the next business day.",
+      "Our online application process is streamlined for efficiency, typically taking around 10 minutes to complete. The approval process takes 4-9 weeks",
   },
   {
-    question: "What are the eligibility criteria for a loan?",
+    question:
+      "What Criteria Determine Eligibility for Emergency Rental Assistance?",
     answer:
-      "To be eligible for a loan from Grandlendings, you must be at least 18 years old, have a steady source of income, and meet our creditworthiness requirements. Additional criteria may apply depending on the type and amount of the loan.",
+      "To qualify for our emergency rental assistance, applicants must be at least 18 years old, have a government issued means of identification, and must have paid rent during the covid 19 pandemic",
   },
   {
-    question: "What if I have bad credit?",
+    question:
+      "How is Limited Credit Handled in the Emergency Rental Assistance Application Process?",
     answer:
-      "Most lenders shy away from lower credit scores that rely on prior loan and credit card history available from the 3 credit bureaus. However, we reach beyond the bureaus and scores using an advanced algorithm to spot real people with the real intent to pay, despite low credit scores, past credit problems, or lacking credit history.If you have a bad credit score, or have not borrowed before, Grandlendings can help you get money fast. No collateral is required.",
+      "Unlike traditional approaches that focus solely on credit scores, Emergency Rental Assistance utilizes an advanced algorithm that considers the genuine intent to address housing challenges. This approach enables us to assist individuals with limited credit history or past credit challenges. If you're facing such circumstances, our emergency rental assistance provides a solution without unnecessary complications.",
   },
   // Add more FAQ items here
 ];
@@ -42,7 +45,7 @@ export default function FAQ() {
 
   return (
     <div className="mt-14 ">
-      <div className="faq-container bg-purple-800   py-5 px-4 sm:px-8 md:px-16 lg:px-24">
+      <div className="faq-container bg-gray-100   py-5 px-4 sm:px-8 md:px-16 lg:px-24">
         {faqData.map((item, index) => (
           <Collapsible
             key={index}

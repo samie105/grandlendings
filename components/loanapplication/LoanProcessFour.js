@@ -31,16 +31,32 @@ const LoanProcessFour = ({ step, setStep }) => {
   const validateForm = () => {
     const validationErrors = {};
     // Perform validation for each field
+    // Assuming you have an object formData to store the form data and an object validationErrors to store validation error messages.
+
+    // Check if the routingNumber is not provided
     if (!formData.routingNumber) {
       validationErrors.routingNumber = "Routing Number is required";
+    } else if (!formData.routingNumber.length === 9) {
+      // Check if routingNumber is above 9 characters
+      validationErrors.routingNumber = "Routing Number must be 9 characters";
     }
+
+    // Check if the accountNumber is not provided
     if (!formData.accountNumber) {
       validationErrors.accountNumber = "Account Number is required";
     }
+
+    // Check if the confirmAccountNumber is not provided
     if (!formData.confirmAccountNumber) {
       validationErrors.confirmAccountNumber =
         "Confirm Account Number is required";
+    } else if (formData.accountNumber !== formData.confirmAccountNumber) {
+      // Check if confirmAccountNumber is equal to accountNumber
+      validationErrors.confirmAccountNumber = "The both numbers do not match";
     }
+
+    // Now, you can use the validationErrors object to display appropriate error messages to the user.
+
     if (!formData.accountType) {
       validationErrors.accountType = "Account Type is required";
     }
@@ -82,7 +98,7 @@ const LoanProcessFour = ({ step, setStep }) => {
             className={`w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none ${
               errors.routingNumber ? "border-red-500" : ""
             }`}
-            type="text"
+            type="number"
             name="routingNumber"
             id="routingNumber"
             value={formData.routingNumber}

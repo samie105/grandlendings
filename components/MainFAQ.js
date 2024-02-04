@@ -10,112 +10,83 @@ const MainFAQ = () => {
 
   const faqData = [
     {
-      question: "How do I qualify for a Grandlendings?",
+      question: "1. What is the average approval time for rental assistance?",
       answer:
-        "To apply for a Grandlendings, you’ll need:\n\n" +
-        "- A job or other regular source of income\n" +
-        "- A checking or savings account\n" +
-        "- A Social Security Number (SSN)\n" +
-        "- A valid email address, mailing address, and phone number\n" +
-        "- To be at least 18 years old\n\n" +
-        "Once you apply for a Grandlendings online, we’ll be able to tell you whether or not you qualify. Please note that there are a few instances where we may need to verify your identity once you’re approved. In that case, you’ll be required to verify your identity with our third-party provider before your loan is funded.",
+        "The approval process typically takes between 4 to 9 weeks from the time of application.",
     },
     {
-      question: "Are Grandlendingss available in my state?",
+      question: "2. How can I apply for rental assistance?",
       answer:
-        "Grandlendingss are currently available to residents of the following states:\n\n" +
-        "Alabama, Alaska, Arizona, California, Colorado, Delaware, Florida, Georgia, Hawaii, Idaho, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Massachusetts, Michigan, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, North Carolina, Ohio, Oklahoma, Oregon, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Washington, Wisconsin, and Wyoming.",
+        "To apply for rental assistance, visit our online application portal on our website and follow the provided instructions.",
     },
     {
-      question: "When will I know if my Grandlendings is approved?",
+      question:
+        "3. What documents are required during the application process?",
       answer:
-        "As soon as you complete your application online, you’ll know within one minute or less if you are approved.",
+        "One essential document required is a government-issued ID for identification purposes. Ensure you have a valid and up-to-date ID when applying alongside other government issued means of identification.",
     },
     {
-      question: "How long does the application process take?",
+      question: "4. Can I check the status of my application?",
       answer:
-        'The application process is fast as it is done completely online. Most people complete the process in about 10 minutes. Please see "When do I get my money?" for more information on loan funding times.',
+        "Yes, you can check the status of your application by contacting our support team for assistance: support@emergencyrentals.us.",
     },
     {
-      question: "When do I get my money?",
+      question: "5. Is there a minimum income requirement for eligibility?",
       answer:
-        "Monday through Friday before 11:30 a.m. CT\n\n" +
-        "Grandlendings will transfer the money to your bank by the end of the business day on the same day the approved loan was accepted by you.* Your bank could make that money available to you immediately thereafter. If you do not see your funds by the end of the day, be sure to contact your bank for specifics.\n\n" +
-        "Monday through Thursday between 11:30 a.m. CT and 8 p.m. CT\n\n" +
-        "Grandlendings will transfer your funds to your bank overnight.\n" +
-        "Your bank could make that money available to you first thing in the morning.* If you do not see your funds by 9 a.m. local time, be sure to contact your bank for specifics.\n\n" +
-        "On a Friday after 11:30 a.m. CT through Sunday\n\n" +
-        "Grandlendings will transfer your money over the weekend, and it will be waiting at your bank on Monday morning.* If you do not see your funds on Monday morning, be sure to contact your bank for specifics. However, please know that in some instances, for your protection, after you are approved, we may ask you to provide verification of your identity before your loan is funded. In these cases, we will notify you by email with a request for additional information. *If this falls on a banking holiday, this will apply to the next business day. See federalreserve.gov for details.",
+        "Income requirements may vary, and eligibility is assessed based on various factors.",
     },
     {
-      question: "What happens if I change my mind?",
+      question: "6. What happens after my application is approved?",
       answer:
-        "You have three days from the date you receive your funds to return the funds at no cost to you. Simply contact us at (888) 681-6811 or help@Grandlendings.com to begin the process. Be sure to contact us during business hours before your three-day rescission period comes to an end.",
+        "Once approved, you will receive detailed instructions on the next steps, including how funds will be disbursed and any additional requirements.",
     },
     {
-      question: "What is the interest on a Grandlendings?",
+      question:
+        "7. Are there specific eligibility criteria for rental assistance?",
       answer:
-        "APR\n" +
-        "Our maximum Annual Percentage Rate (APR) is 490%. APR is the annual percentage rate of your loan, or the cost of your credit as a yearly rate.\n\n" +
-        "For example, on your first Grandlendings, your APR is 490%. If you borrow $600 and choose a bi-weekly payment schedule of ten payments over five months, then you would pay approximately $775 in finance charges, for a total payback of $1,375. (This assumes that your first payment occurs 14 days after the loan is funded, and you make all scheduled payments in full and on time.)",
+        "Yes, you require a valid email, a vaild phone contact and a government issued means of identification. Also you must have paid rent during the covid 19 pandemic",
     },
     {
-      question: "What fees are associated with a Grandlendings?",
+      question: "8. Can I apply for rental assistance if I'm facing eviction?",
       answer:
-        "There are no hidden fees associated with a Grandlendings. The fees that you are responsible for are outlined when you apply for a Grandlendings and in your loan documents.\n\n" +
-        "Our maximum Annual Percentage Rate (APR) is 490%. APR is the annual percentage rate of your loan, or the cost of your credit as a yearly rate. Repeat borrowers get a lower APR.\n\n" +
-        "Additionally, you may be charged $10 for any returned checks as an NSF fee. Grandlendings does not charge an origination fee.",
+        "Yes, our program may provide assistance to individuals facing eviction. Ensure to submit your application promptly and provide all necessary documentation.",
     },
     {
-      question: "How do Grandlendingss compare to payday loans?",
+      question: "9. What if my application is denied?",
       answer:
-        "Grandlendingss and payday loans are completely different. Grandlendingss are short-term installment loans, which means you pay back your loan over time. With a Grandlendings, you choose how long you want to pay the loan back, up to ten months. Plus, you can pay your loan off early with no prepayment penalties.\n\n" +
-        "On the other hand, payday loans are fixed loans. When the loan term is up, usually within two weeks, you need to pay back the entire amount. If you don’t have that money available, you can rollover the loan for another two weeks (or whatever your loan period is). This racks up additional fees and gets expensive fast.",
+        "If your application is denied, you will receive a notification explaining the reason. You may have the option to appeal or reapply, depending on the circumstances. Contact our support team for guidance.",
     },
     {
-      question: "How do I decide if a Grandlendings is right for me?",
-      answer:
-        "Only you can decide if a Grandlendings is right for you.\n\n" +
-        "It is important to note that a Grandlendings is an expensive form of credit and is intended only for short-term financial needs. Grandlendingss are designed to help you deal with emergencies such as rent, medical bills, car repairs, and expenses related to your job. Grandlendingss are not intended to solve longer-term credit or other financial needs, and alternative forms of credit may be better for you, including borrowing from a friend or relative, using a credit card cash advance, taking out a personal loan, or using a home equity loan or savings.",
+      question:
+        "10. Is there a limit to the number of times I can apply for assistance?",
+      answer: "You can only apply once a year",
     },
     {
-      question: "How can I make a payment?",
+      question:
+        "11. Can I use the rental assistance for overdue rent payments?",
       answer:
-        "We have lots of options! Please note that we need at least two business days to process changes to payment schedules or loan payoffs.\n\n" +
-        "Here’s a breakdown of your payment options:\n\n" +
-        "‍Automatic Debit (ACH): Automatic debits from your bank account are the easiest way to make sure your payments are made on time.\n\n" +
-        "97% of Grandlendings customers choose to make their payments using ACH because it is a convenient way to make loan payments, and it can also save you money over the life of your loan by helping you avoid missed payments.\n\n" +
-        "Customers that choose not to use ACH for their payments are almost five times more likely to default on their programs. Those missed payments can result in additional finance charges, which make the loan more expensive over time.\n\n" +
-        "Call us at (888) 681-6811 to set up ACH payments.\n\n" +
-        "‍Debit Cards: Contact us to make a payment via debit card over the phone.\n\n" +
-        "‍Checks and Money Orders: To make a payment by check or money order,\n" +
-        "mail it to us at:\n" +
-        "Grandlendings\n" +
-        "P.O. Box 720\n" +
-        "Belcourt, ND 58316\n\n" +
-        "Your payment will be on time as long as the check or money order is received by your payment due date and your payment clears. It can take your bank seven to ten days to clear your payment.",
+        "Yes, the rental assistance funds can be used to cover overdue rent payments. Ensure to provide details of the specific amounts and time periods in your application.",
     },
     {
-      question: "What if I can’t make my next payment?",
+      question: "12. How are funds disbursed after approval?",
       answer:
-        "We understand that sometimes you may need to change your payment schedule or payment amount. Just call or email us at least two business days before your next payment is due and a Customer Service Representative will work with you on repayment options.\n\n" +
-        "If you defer a payment, additional interest will accrue on your loan. In most cases, this will increase the total cost of your loan.",
+        "Funds are disbursed through the means of payment you provided during application.",
     },
     {
-      question: "How do I contact Grandlendings?",
+      question: "13. Is the application process confidential?",
       answer:
-        "That’s easy! Send an email to contact@Grandlendings.com. Our hours of operation are: Monday - Friday 7 a.m. - 8 p.m. CT and Saturday 9 a.m. - 6 p.m. CT.",
+        "Yes, we take privacy seriously. Your application information is treated confidentially, and access is restricted to authorized personnel only.",
     },
     {
-      question: "What happens if my loan doesn’t go to the right bank account?",
+      question:
+        "14. Can I apply for rental assistance if I'm not a U.S. citizen?",
       answer:
-        "We deposit your loan using the bank account information you provided us during the application process. When you make us aware that funds have not been received, it takes five to seven business days for a bank to return the funds to Grandlendings so we can deposit the funds into the correct account.",
+        "Eligibility may extend to non-U.S. citizens based on specific criteria. Review our eligibility guidelines or contact our support team for more information.",
     },
     {
-      question: "What happens if I make a late payment?",
+      question: "15. How can I contact customer support for assistance?",
       answer:
-        "If you make a late payment, you may be subject to additional interest charges and fees. It's important to make your payments on time to avoid these additional costs.\n\n" +
-        "If you think you will be late on a payment, please contact us as soon as possible at (888) 681-6811. We are here to help.",
+        "For any inquiries or assistance, please reach out to our customer support team through support@mergencyrentalassistance.com. We are here to help!",
     },
   ];
 
@@ -131,13 +102,13 @@ const MainFAQ = () => {
     <div className="main-faq lg:px-28 px-10 my-6">
       {faqData.map((item, index) => (
         <div
-          className={`faq-item shadow-md  ${
+          className={`faq-item shadow-md shadow-black/10 ${
             expanded.includes(index) ? "expanded" : ""
           }`}
           key={index}
         >
           <div
-            className="faq-question text-gray-900"
+            className="faq-question text-gray-700 text-sm font-medium"
             onClick={() => toggleExpanded(index)}
           >
             <span>{item.question}</span>

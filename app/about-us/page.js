@@ -7,128 +7,175 @@ export default function AboutUs() {
     <>
       <div className="page-container w-full">
         <section className="imageNhero w-full relative overflow-hidden">
-          <div className="overlay absolute bg-black opacity-80 w-full h-full"></div>
+          <div className="overlay absolute bg-purple-900 opacity-80 w-full h-full"></div>
           <div className="text-container flex flex-col justify-center items-center absolute z-10 w-full h-full">
             <div className="text-header text-lg sm:text-xl md:text-3xl lg:text-5xl text-white font-extrabold opacity-90">
               About Us
             </div>
             <div className="text-content px-10 py-5 text-xs md:py-7 md:px-14 sm:py-4 sm:px-10 sm:text-sm text-white opacity-90 font-semibold lg:text-xl lg:px-28 lg:py-10 text-center">
-              We pride ourselves on being there for our customers whenever they
-              need us
+              We are committed to providing rental assistance to those in need.
             </div>
           </div>
-          <div className="image-container">
+          <div className="image-container lg:h-[50vh] overflow-hidden">
             <Image
               src="/assets/aboutus.jpg"
               width={500}
               height={500}
               alt="Successful loan application merry moment"
-              className="w-full lg:h-2/6"
+              className="w-full full"
             />
           </div>
         </section>
-        <section>
-          <div className="container mx-auto px-6 lg:px-24 py-16">
-            <h2 className="text-3xl font-bold text-center mt-8 mb-12">
-              Grandlendings - Your Trusted Financial Partner
-            </h2>
-            <div className="flex flex-col md:flex-row justify-center items-center">
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Transparent and Responsible Lending
+        <section className="w-full py-10">
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+            {/* <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                About Us
+              </h2>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                We are committed to providing rental assistance to those in
+                need.
+              </p>
+            </div> */}
+            <div className="grid w-full grid-cols-2 items-stretch justify-center gap-6 md:grid-cols-4 lg:gap-12">
+              <div className="mx-auto flex w-full items-center justify-center flex-col">
+                <HomeIcon className="h-10 w-10 mb-4 text-purple-800" />
+                <h3 className="text-lg font-bold text-purple-800">
+                  Rental Assistance
                 </h3>
-                <p className="text-gray-600">
-                  We prioritize transparency and responsible lending practices
-                  to ensure that you make informed decisions. Our commitment to
-                  transparency means that we provide clear and concise
-                  information about loan terms, interest rates, and fees
-                  upfront. We believe in responsible lending, and our team of
-                  experts works diligently to match you with lenders who offer
-                  fair and competitive loan options that suit your financial
-                  situation.
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  We provide financial aid to individuals struggling to pay
+                  rent.
                 </p>
               </div>
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Fast and Convenient Application Process
+              <div className="mx-auto flex w-full items-center justify-center flex-col">
+                <ShieldCheckIcon className="h-10 w-10 mb-4  text-purple-800" />
+                <h3 className="text-lg font-bold  text-purple-800">
+                  Importance
                 </h3>
-                <p className="text-gray-600">
-                  We understand that time is of the essence when it comes to
-                  financial emergencies. With Grandlendings, you can say goodbye
-                  to lengthy paperwork and time-consuming bank visits. Our
-                  streamlined application process allows you to apply for a loan
-                  online in just a few simple steps. You can complete the entire
-                  process from the comfort of your home or on the go, using any
-                  device with an internet connection.
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Our assistance ensures that individuals maintain safe and
+                  stable housing.
+                </p>
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center flex-col">
+                <HeartIcon className="h-10 w-10 mb-4 text-purple-800" />
+                <h3 className="text-lg font-bold  text-purple-800">Impact</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  We've helped thousands of individuals avoid eviction and
+                  homelessness.
+                </p>
+              </div>
+              <div className="mx-auto flex w-full items-center justify-center flex-col">
+                <BookOpenIcon className="h-10 w-10 mb-4 text-purple-800" />
+                <h3 className="text-lg font-bold  text-purple-800">
+                  Resources
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  We provide additional resources to help individuals navigate
+                  their financial challenges.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center">
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Flexible Loan Options
-                </h3>
-                <p className="text-gray-600">
-                  We recognize that everyone's financial needs are unique.
-                  That's why we offer a wide range of loan options to cater to
-                  different circumstances. Whether you need a personal loan to
-                  consolidate debt, a business loan to expand your operations,
-                  or an emergency loan to cover unexpected expenses, we have you
-                  covered. Our lenders provide flexible loan terms, allowing you
-                  to choose the repayment schedule that best suits your budget
-                  and financial goals.
-                </p>
-              </div>
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">Security and Privacy</h3>
-                <p className="text-gray-600">
-                  At Grandlendings, we prioritize the security and privacy of
-                  our customers. We employ industry-standard security measures
-                  to safeguard your personal and financial information. Our
-                  website and application process are encrypted to ensure that
-                  your data remains confidential and protected. We are committed
-                  to maintaining the highest standards of data privacy and
-                  adhere to strict protocols to ensure that your information is
-                  handled securely.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row justify-center items-center">
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Exceptional Customer Support
-                </h3>
-                <p className="text-gray-600">
-                  We believe in providing exceptional customer support
-                  throughout your borrowing journey. Our dedicated customer
-                  support team is always ready to assist you with any queries or
-                  concerns you may have. Whether you need help with the
-                  application process, loan terms, or general assistance, we are
-                  just a phone call or email away. Your satisfaction is our top
-                  priority, and we strive to deliver prompt and helpful support
-                  at every step.
-                </p>
-              </div>
-              <div className="w-full md:w-1/2 p-4 md:p-6">
-                <h3 className="text-xl font-bold mb-4">
-                  Join Grandlendings Today
-                </h3>
-                <p className="text-gray-600">
-                  Whether you need financial assistance for personal or business
-                  purposes, Grandlendings is your reliable partner. We are
-                  committed to helping you navigate your financial challenges
-                  with ease and convenience. Join thousands of satisfied
-                  borrowers who have experienced the benefits of our efficient
-                  and trustworthy loan services. Apply for a loan with
-                  Grandlendings today and discover a world of financial
-                  possibilities.
-                </p>
-              </div>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-8">
+              <Link
+                className="inline-flex h-10 items-center justify-center rounded-md bg-purple-800 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                href="/"
+              >
+                Apply Now
+              </Link>
             </div>
           </div>
         </section>
+        <Disclosure />
         <FAQ />
       </div>
     </>
+  );
+}
+
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/bsovfEFwvZX
+ */
+import Link from "next/link";
+import Disclosure from "@/components/Disclosure";
+
+function BookOpenIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+  );
+}
+
+function HeartIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  );
+}
+
+function HomeIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  );
+}
+
+function ShieldCheckIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
   );
 }

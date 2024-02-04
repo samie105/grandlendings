@@ -90,19 +90,31 @@ const LoanProcessTwo = ({ step, setStep }) => {
       setStep((prevStep) => prevStep - 1);
     }
   };
-
+  const isValidEmail = (email) => {
+    // Use a regular expression for basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   const validateForm = () => {
     const errors = {};
 
     // Validate email address
+    // Validate email address
     if (!formData.emailAddress) {
       errors.emailAddress = "Email address is required.";
+    } else if (!isValidEmail(formData.emailAddress)) {
+      errors.emailAddress = "Please enter a valid email address.";
     }
 
     // Validate primary phone number
     if (!formData.primaryPhoneNumber) {
       errors.primaryPhoneNumber = "Primary phone number is required.";
+    } else if (formData.primaryPhoneNumber.length < 10) {
+      errors.primaryPhoneNumber =
+        "Primary phone number must be at least 10 digits.";
     }
+
+    // Function to check valid email address
 
     return errors;
   };

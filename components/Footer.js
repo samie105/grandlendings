@@ -7,24 +7,33 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="bg-purple-800 text-white py-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+    <div className="bg-purple-950 text-white py-12">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 px-4">
         <div className="flex flex-col space-y-4">
+          <div className="LogoSide font-bold lg:pl-3 ">
+            <Image
+              src="/assets/GLlogo.png"
+              alt=""
+              width={1000}
+              height={1000}
+              className="w-full h-full"
+            />
+          </div>
           <h3 className="text-lg font-semibold">Contact Details</h3>
           <div className="flex items-center space-x-2">
             <MailIcon className="h-5 w-5 text-gray-300" />
-            <span>loans@grandlendings.com</span>
+            <span>support@grandlendings.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <PhoneIcon className="h-5 w-5 text-gray-300" />
-            <span>+1 (413) 239 4226</span>
+            <span>+1 (970) 276 0083</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 text-sm w-full">
             <LocateIcon className="h-5 w-5 text-gray-300" />
-            <span>2 LISA LN SAUGUS MA, 01906-3382, USA</span>
+            <span>Grandlendings, PO Box 630, Los Angeles, CA 90074-9399</span>
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
+        {/* <div className="flex flex-col space-y-4">
           <h3 className="text-lg font-semibold">Trust Badges</h3>
           <div className="grid grid-cols-3 gap-2">
             <div className=" p-2 flex items-center justify-center">
@@ -55,12 +64,13 @@ export default function Footer() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col space-y-4">
           <h3 className="text-lg font-semibold">About Us</h3>
           <p className="bg-white bg-opacity-20 rounded-lg p-4 text-sm">
-            Our mission is to provide affordable and accessible loans to
-            everyone. We believe in financial inclusion and empowerment.
+            Our mission is to offer affordable and accessible rental assistance
+            to everyone. We believe in promoting housing inclusion and
+            empowerment
           </p>
         </div>
         <div className="flex flex-col space-y-4">
@@ -72,11 +82,23 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center space-x-2">
+            <ArrowRightIcon className="h-5 w-5 text-gray-300" />
+            <Link className="hover:underline" href="/about-us">
+              About us
+            </Link>
+          </div>
+          <div className="flex items-center space-x-2">
+            <ArrowRightIcon className="h-5 w-5 text-gray-300" />
+            <Link className="hover:underline" href="/Loan-Process">
+              How it works
+            </Link>
+          </div>
+          {/* <div className="flex items-center space-x-2">
             <CalculatorIcon className="h-5 w-5 text-gray-300" />
             <Link className="hover:underline" href="#">
               Loan Calculator
             </Link>
-          </div>
+          </div> */}
           <div className="flex items-center space-x-2">
             <FileQuestionIcon className="h-5 w-5 text-gray-300" />
             <Link className="hover:underline" href="/FAQ">

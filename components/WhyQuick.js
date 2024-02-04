@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhyQuick() {
   return (
-    <section key="1" className="w-full py-12 md:py-24 lg:py-32 bg-purple-800">
+    <section key="1" className="w-full py-12 md:py-24 lg:py-32 /bg-gray-100">
       <div className="container px-4 md:px-6">
         <div className="grid items-center gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
           <Image
@@ -16,47 +16,52 @@ export default function WhyQuick() {
           />
           <div className="flex flex-col justify-center space-y-4 bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6 dark:bg-gray-800 dark:bg-opacity-10">
             <div className="space-y-2">
-              <h2 className="text-xl pb-3 font-bold tracking-tighter text-white sm:text-3xl">
+              <h2 className="text-xl pb-3 font-bold tracking-tighter text-black/90 sm:text-3xl">
                 Why Grandlendings?
               </h2>
-              <p className="max-w-[600px] text-sm text-gray-200 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Grandlendings is a better way to borrow extra money. It's not a
-                payday loan. It's an installment loan, which means you pay down
-                the balance with each on-time payment. Borrow from $300 to $1500
-                - up to $800 for new and repeat borrowers, and up to $1500 for
-                preferred borrowers with 10 or more loans! Then, pay us back a
-                little at a time.
+              <p className="max-w-[600px] text text-black/70 /md:text-xl/relaxed /lg:text-base/relaxed /xl:text-xl/relaxed dark:text-gray-400">
+                Grandlendings provides a valuable resource for obtaining extra
+                financial support during challenging times. It's a dedicated
+                assistance program crafted to address your urgent rental needs.
+                Whether you require help with imminent rental payments or other
+                housing-related expenses, our service is here to assist you.
+                Receive support ranging from $300 to $1500, with tailored
+                options for different circumstances. The repayment process is
+                designed to be flexible, allowing you to address your financial
+                responsibilities gradually and with ease.
               </p>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-10 backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <FastForwardIcon className="mb-4 h-16 w-16 text-white" />
-            <h3 className="text-lg font-semibold text-white">Fast Approval</h3>
-            <p className="text-gray-200 text-center text-sm dark:text-gray-400">
-              Get approved for a loan in minutes with our quick and easy
-              application process.
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-10 backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <CalendarIcon className="mb-4 h-16 w-16 text-white" />
-            <h3 className="text-lg font-semibold text-white">
-              Flexible Payments
+          <div className="flex flex-col items-center justify-center p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <FastForwardIcon className="mb-4 h-16 w-16 text-purple-800" />
+            <h3 className="text-lg font-semibold text-purple-800">
+              Swift Assistance
             </h3>
-            <p className="text-gray-200 text-sm text-center dark:text-gray-400">
-              Choose a payment plan that works for you and pay back your loan
-              over time.
+            <p className="text-black/70 text-center text-sm dark:text-gray-400">
+              Receive prompt rental assistance with our quick and
+              straightforward application process.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center p-6 bg-white bg-opacity-10 backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <LockIcon className="mb-4 h-16 w-16 text-white" />
-            <h3 className="text-lg font-semibold text-white">
+          <div className="flex flex-col items-center justify-center  p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <CalendarIcon className="mb-4 h-16 w-16 text-purple-800" />
+            <h3 className="text-lg font-semibold text-purple-800">
+              Flexible Support
+            </h3>
+            <p className="text-black/70 text-sm text-center dark:text-gray-400">
+              Select a support plan that suits your needs and manage your rental
+              assistance over time.
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center  p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <LockIcon className="mb-4 h-16 w-16 text-purple-800" />
+            <h3 className="text-lg font-semibold text-purple-800">
               Secure and Confidential
             </h3>
-            <p className="text-gray-200 text-sm text-center dark:text-gray-400">
-              Your personal information is kept safe and confidential with our
-              secure system.
+            <p className="text-black/70 text-sm text-center dark:text-gray-400">
+              Rest assured, your personal information is safeguarded and kept
+              confidential through our secure system.
             </p>
           </div>
         </div>

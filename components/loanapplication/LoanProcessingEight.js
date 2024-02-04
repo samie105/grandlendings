@@ -35,7 +35,7 @@ const LoanProcessingEight = ({ step, setStep }) => {
         </div>
         <div className="text-center mt-2">
           <p className="text-sm text-gray-600 font-bold">
-            Reviewing Loan Application...
+            Reviewing Application...
           </p>
         </div>
       </div>
