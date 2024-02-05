@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <>
       <header
-        className={`holder transition-all  overflow-hidden items-center bg-purple-800 text-white ${
+        className={`holder transition-all  overflow-hidden items-center bg-[#111111] text-white ${
           isMobileMenuOpen ? "h-auto transition-all" : "transition"
         }`}
       >
@@ -51,18 +51,18 @@ function Navbar() {
                 <NavLink href="/" exact>
                   <li className="px-2 text-sm">Home</li>
                 </NavLink>
-                <NavLink href="/about-us">
+                <NavLink href="/about-us" exact>
                   {" "}
-                  <li className="px-2 opacity-80 text-sm">About Us</li>
+                  <li className="px-2  text-sm">About Us</li>
                 </NavLink>
-                <NavLink href="/Loan-Process">
-                  <li className="px-2 opacity-80 text-sm">How it Works</li>
+                <NavLink href="/Loan-Process" exact>
+                  <li className="px-2  text-sm">How it Works</li>
                 </NavLink>
-                <NavLink href="/FAQ">
-                  <li className="px-2 opacity-80 text-sm">FAQ</li>
+                <NavLink href="/FAQ" exact>
+                  <li className="px-2  text-sm">FAQ</li>
                 </NavLink>
-                <NavLink href="/Contact-Us">
-                  <li className="px-2 opacity-80 text-sm">Contact Us</li>
+                <NavLink href="/Contact-Us" exact>
+                  <li className="px-2  text-sm">Contact Us</li>
                 </NavLink>
               </ul>
             </div>

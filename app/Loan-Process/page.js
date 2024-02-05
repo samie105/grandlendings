@@ -30,7 +30,7 @@ export default function LoanProcess() {
     <>
       <div className="page-container w-full">
         <section className="imageNhero w-full relative overflow-hidden">
-          <div className="overlay absolute bg-purple-800 opacity-80 w-full h-full z-10"></div>
+          <div className="overlay absolute bg-[#111111] opacity-80 w-full h-full z-10"></div>
           <div className="text-container flex flex-col justify-center items-center absolute z-10 w-full h-full">
             <div className="text-header text-lg sm:text-xl md:text-3xl text-white font-extrabold opacity-90">
               How Emergency Rental Assistance Works
@@ -71,8 +71,8 @@ export default function LoanProcess() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
               <Card>
                 <CardContent className="flex flex-col items-center space-y-2 py-8">
-                  <FileIcon className="h-12 w-12 text-purple-800 dark:text-gray-50" />
-                  <h3 className="text-lg font-semibold text-purple-800">
+                  <FileIcon className="h-12 w-12 text-[#111] dark:text-gray-50" />
+                  <h3 className="text-lg font-semibold text-[#111]">
                     Documentation
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
@@ -83,8 +83,8 @@ export default function LoanProcess() {
               </Card>
               <Card>
                 <CardContent className="flex flex-col items-center space-y-2 py-8">
-                  <UploadIcon className="h-12 w-12 text-purple-800 dark:text-gray-50" />
-                  <h3 className="text-lg font-semibold text-purple-800">
+                  <UploadIcon className="h-12 w-12 text-[#111] dark:text-gray-50" />
+                  <h3 className="text-lg font-semibold text-[#111]">
                     Application
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
@@ -95,8 +95,8 @@ export default function LoanProcess() {
               </Card>
               <Card>
                 <CardContent className="flex flex-col items-center space-y-2 py-8">
-                  <CheckIcon className="h-12 w-12  dark:text-gray-50 text-purple-800" />
-                  <h3 className="text-lg font-semibold text-purple-800">
+                  <CheckIcon className="h-12 w-12  dark:text-gray-50 text-[#111]" />
+                  <h3 className="text-lg font-semibold text-[#111]">
                     Approval
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
@@ -108,8 +108,7 @@ export default function LoanProcess() {
             </div>
             <div className="space-y-4 text-center mt-24">
               <h2 className="text-3xl font-bold tracking-tighter">
-                What You'll{" "}
-                <span className="text-purple-800 underline">Need</span>
+                What You'll <span className="text-[#111] underline">Need</span>
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500  dark:text-gray-400">
                 Here are the documents you'll need to gather before applying.
@@ -117,7 +116,7 @@ export default function LoanProcess() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
               <Card>
-                <CardContent className="flex flex-col items-center space-y-2 py-6 text-purple-800">
+                <CardContent className="flex flex-col items-center space-y-2 py-6 text-[#111]">
                   <CreditCardIcon className="h-12 w-12  dark:text-gray-50" />
                   <h3 className="text-lg font-semibold">Identification</h3>
                   <p className="text-sm text-center text-gray-500 dark:text-gray-400">
@@ -127,7 +126,7 @@ export default function LoanProcess() {
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="flex flex-col items-center space-y-2 py-6 text-purple-800">
+                <CardContent className="flex flex-col items-center space-y-2 py-6 text-[#111]">
                   <HomeIcon className="h-12 w-12  dark:text-gray-50" />
                   <h3 className="text-lg font-semibold">Residence</h3>
                   <p className="text-sm text-center text-gray-500 dark:text-gray-400">
@@ -137,7 +136,7 @@ export default function LoanProcess() {
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="flex flex-col items-center space-y-2 text-purple-800 py-6">
+                <CardContent className="flex flex-col items-center space-y-2 text-[#111] py-6">
                   <CurrencyIcon className="h-12 w-12  dark:text-gray-50" />
                   <h3 className="text-lg font-semibold">Accessibility</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -147,7 +146,7 @@ export default function LoanProcess() {
               </Card>
             </div>
             <div className="flex justify-center mt-16">
-              <Button className="h-12 px-6  font-semibold text-white bg-purple-800 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-100">
+              <Button className="h-12 px-6  font-semibold text-white bg-[#111111] dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-100">
                 <Link href="/">Apply Now</Link>
               </Button>
             </div>

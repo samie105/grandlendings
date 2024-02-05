@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <div className="relative">
         <div className="absolute w-full h-full top-0 left-0">
-          <div className="absolute /z-10 w-full h-full bg-purple-800 opacity-80"></div>
+          <div className="absolute /z-10 w-full h-full bg-[#111111] opacity-80"></div>
           <Image
             width={1000}
             height={1000}

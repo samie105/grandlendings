@@ -15,9 +15,9 @@ export default function Component() {
       <section className="container mx-auto px-6 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
+            <div className="flex items-center gap-2 text-[#111]">
               <HomeIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
+              <CardTitle className="text-base text-[#111]">
                 Rent Assistance
               </CardTitle>
             </div>
@@ -30,9 +30,9 @@ export default function Component() {
         </Card>
         <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
+            <div className="flex items-center gap-2 text-[#111]">
               <HomeIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
+              <CardTitle className="text-base text-[#111]">
                 Essential Utilities
               </CardTitle>
             </div>
@@ -45,9 +45,9 @@ export default function Component() {
         </Card>
         <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
+            <div className="flex items-center gap-2 text-[#111]">
               <WrenchIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
+              <CardTitle className="text-base text-[#111]">
                 Maintenance Support
               </CardTitle>
             </div>
@@ -60,9 +60,9 @@ export default function Component() {
         </Card>
         {/* <Card className="rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
           <CardHeader>
-            <div className="flex items-center gap-2 text-purple-800">
+            <div className="flex items-center gap-2 text-[#111]">
               <HomeIcon className="w-5 h-5" />
-              <CardTitle className="text-base text-purple-800">
+              <CardTitle className="text-base text-[#111]">
                 Medical Expenses
               </CardTitle>
             </div>

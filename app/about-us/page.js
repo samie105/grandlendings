@@ -7,7 +7,7 @@ export default function AboutUs() {
     <>
       <div className="page-container w-full">
         <section className="imageNhero w-full relative overflow-hidden">
-          <div className="overlay absolute bg-purple-900 opacity-80 w-full h-full"></div>
+          <div className="overlay absolute bg-[#111] opacity-80 w-full h-full"></div>
           <div className="text-container flex flex-col justify-center items-center absolute z-10 w-full h-full">
             <div className="text-header text-lg sm:text-xl md:text-3xl lg:text-5xl text-white font-extrabold opacity-90">
               About Us
@@ -39,8 +39,8 @@ export default function AboutUs() {
             </div> */}
             <div className="grid w-full grid-cols-2 items-stretch justify-center gap-6 md:grid-cols-4 lg:gap-12">
               <div className="mx-auto flex w-full items-center justify-center flex-col">
-                <HomeIcon className="h-10 w-10 mb-4 text-purple-800" />
-                <h3 className="text-lg font-bold text-purple-800">
+                <HomeIcon className="h-10 w-10 mb-4 text-[#111]" />
+                <h3 className="text-lg font-bold text-[#111]">
                   Rental Assistance
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -49,28 +49,24 @@ export default function AboutUs() {
                 </p>
               </div>
               <div className="mx-auto flex w-full items-center justify-center flex-col">
-                <ShieldCheckIcon className="h-10 w-10 mb-4  text-purple-800" />
-                <h3 className="text-lg font-bold  text-purple-800">
-                  Importance
-                </h3>
+                <ShieldCheckIcon className="h-10 w-10 mb-4  text-[#111]" />
+                <h3 className="text-lg font-bold  text-[#111]">Importance</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Our assistance ensures that individuals maintain safe and
                   stable housing.
                 </p>
               </div>
               <div className="mx-auto flex w-full items-center justify-center flex-col">
-                <HeartIcon className="h-10 w-10 mb-4 text-purple-800" />
-                <h3 className="text-lg font-bold  text-purple-800">Impact</h3>
+                <HeartIcon className="h-10 w-10 mb-4 text-[#111]" />
+                <h3 className="text-lg font-bold  text-[#111]">Impact</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   We've helped thousands of individuals avoid eviction and
                   homelessness.
                 </p>
               </div>
               <div className="mx-auto flex w-full items-center justify-center flex-col">
-                <BookOpenIcon className="h-10 w-10 mb-4 text-purple-800" />
-                <h3 className="text-lg font-bold  text-purple-800">
-                  Resources
-                </h3>
+                <BookOpenIcon className="h-10 w-10 mb-4 text-[#111]" />
+                <h3 className="text-lg font-bold  text-[#111]">Resources</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   We provide additional resources to help individuals navigate
                   their financial challenges.
@@ -79,7 +75,7 @@ export default function AboutUs() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-8">
               <Link
-                className="inline-flex h-10 items-center justify-center rounded-md bg-purple-800 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-[#111111] px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                 href="/"
               >
                 Apply Now

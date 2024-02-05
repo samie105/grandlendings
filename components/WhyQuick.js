@@ -34,9 +34,9 @@ export default function WhyQuick() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          <div className="flex flex-col items-center justify-center p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <FastForwardIcon className="mb-4 h-16 w-16 text-purple-800" />
-            <h3 className="text-lg font-semibold text-purple-800">
+          <div className="flex flex-col items-center justify-center p-6 /bg-[#111111] /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <FastForwardIcon className="mb-4 h-16 w-16 text-[#111]" />
+            <h3 className="text-lg font-semibold text-[#111]">
               Swift Assistance
             </h3>
             <p className="text-black/70 text-center text-sm dark:text-gray-400">
@@ -44,9 +44,9 @@ export default function WhyQuick() {
               straightforward application process.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center  p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <CalendarIcon className="mb-4 h-16 w-16 text-purple-800" />
-            <h3 className="text-lg font-semibold text-purple-800">
+          <div className="flex flex-col items-center justify-center  p-6 /bg-[#111111] /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <CalendarIcon className="mb-4 h-16 w-16 text-[#111]" />
+            <h3 className="text-lg font-semibold text-[#111]">
               Flexible Support
             </h3>
             <p className="text-black/70 text-sm text-center dark:text-gray-400">
@@ -54,9 +54,9 @@ export default function WhyQuick() {
               assistance over time.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center  p-6 /bg-purple-800 /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
-            <LockIcon className="mb-4 h-16 w-16 text-purple-800" />
-            <h3 className="text-lg font-semibold text-purple-800">
+          <div className="flex flex-col items-center justify-center  p-6 /bg-[#111111] /bg-opacity-10 /backdrop-blur-md rounded-xl dark:bg-gray-800 dark:bg-opacity-10">
+            <LockIcon className="mb-4 h-16 w-16 text-[#111]" />
+            <h3 className="text-lg font-semibold text-[#111]">
               Secure and Confidential
             </h3>
             <p className="text-black/70 text-sm text-center dark:text-gray-400">

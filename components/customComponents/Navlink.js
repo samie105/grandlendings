@@ -11,7 +11,7 @@ export const NavLink = ({ href, exact, children, ...props }) => {
 
   const linkClassName = isActive
     ? `${props.className} ${active}`
-    : props.className;
+    : `${props.className} opacity-70`;
 
   return (
     <Link href={href} legacyBehavior>
