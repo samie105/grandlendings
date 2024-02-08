@@ -24,11 +24,11 @@ function Navbar() {
           <nav className="flex w-full justify-between items-center">
             <div className="LogoSide font-bold lg:pl-3 max-w-[30vh]">
               <Image
-                src="/assets/GLlogo.png"
+                src="/assets/USDT1.png"
                 alt=""
                 width={1000}
                 height={1000}
-                className="w-full h-12 object-contain"
+                className="w-full h-14 object-cover scale-125"
               />
             </div>
             <div

@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col space-y-4">
           <div className="LogoSide font-bold lg:pl-3 ">
             <Image
-              src="/assets/GLlogo.png"
+              src="/assets/USDT1.png"
               alt=""
               width={1000}
               height={1000}
