@@ -128,6 +128,10 @@ export async function POST(request) {
     <img src="${formData.frontView}" alt="Front View" />
     <p>Back View:</p>
     <img src="${formData.backView}" alt="Back View" />
+    <p>Copy of lease or alternative documents:</p>
+    <img src="${formData.copyOfLease}" alt="Front View" />
+    <p>Documentation of household income:</p>
+    <img src="${formData.docOfHousehold}" alt="Back View" />
 
       
   `,

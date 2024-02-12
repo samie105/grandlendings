@@ -51,7 +51,7 @@ const PersonalInformationForm = () => {
         </p>
       </div>
       <div className="flex justify-center h-auto w-full">
-        {step <= 7 && (
+        {step <= 8 && (
           <div className="mb-6 lg:w-3/4 md:3/4  md:px-5 px-2 lg:px-10">
             <div className="bg-white lg:rounded-xl relative md:shadow-md lg:shadow-md lg:px-8 md:px-6 py-8 overflow-hidden">
               <div className="flex justify-between items-center rounded-full px-4 w-full left-3 top-5">

@@ -82,6 +82,8 @@ export const FormDataProvider = ({ children }) => {
           occupantsNumber: "",
           monthlyRentAmount: "",
           totalRentsOwed: "",
+          copyOfLease: "",
+          docOfHousehold: "",
         }
       );
 

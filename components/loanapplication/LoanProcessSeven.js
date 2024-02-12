@@ -20,9 +20,17 @@ const LoanProcessSeven = ({ step, setStep }) => {
   const { formData, setFormData } = useContext(FormDataContext);
   const [isFileUploading, setFileUploading] = useState(false);
   const [isFileUploadingback, setFileUploadingback] = useState(false);
+  const [iscopyOfLease, setCopyOfLease] = useState(false);
+  const [isdocOfHousehold, setDocOfHousehold] = useState(false);
   const [bgloading, setbgloading] = useState(false);
   const [errors, setErrors] = useState({});
   const router = useRouter();
+
+  const [consentAgreed, setConsentAgreed] = useState(false);
+
+  const handleConsentAgreement = () => {
+    setConsentAgreed(!consentAgreed);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -112,6 +120,32 @@ const LoanProcessSeven = ({ step, setStep }) => {
     }
     setFileUploading(false);
   };
+  const handlecopyleaseupload = async (acceptedFiles) => {
+    const file = acceptedFiles[0];
+
+    try {
+      setCopyOfLease(true);
+      const fileUrl = await handleFileUpload(file);
+
+      setFormData({ ...formData, copyOfLease: fileUrl });
+    } catch (error) {
+      // Handle the error
+    }
+    setCopyOfLease(false);
+  };
+  const handledocOfHousehold = async (acceptedFiles) => {
+    const file = acceptedFiles[0];
+
+    try {
+      setDocOfHousehold(true);
+      const fileUrl = await handleFileUpload(file);
+
+      setFormData({ ...formData, docOfHousehold: fileUrl });
+    } catch (error) {
+      // Handle the error
+    }
+    setDocOfHousehold(false);
+  };
 
   const handleBackViewUpload = async (acceptedFiles) => {
     const file = acceptedFiles[0];
@@ -181,6 +215,33 @@ const LoanProcessSeven = ({ step, setStep }) => {
         .toLowerCase();
       if (!["jpg", "png"].includes(backViewExtension)) {
         errors.backView = "Accepted formats: jpg, png";
+        isValid = false;
+      }
+    }
+    if (!formData.copyOfLease) {
+      errors.copyOfLease = "Copy of lease or alternative documents is required";
+      isValid = false;
+    } else {
+      const frontViewExtension = formData.copyOfLease
+        .split(".")
+        .pop()
+        .toLowerCase();
+      if (!["jpg", "png"].includes(frontViewExtension)) {
+        errors.copyOfLease = "Accepted formats: jpg, png";
+        isValid = false;
+      }
+    }
+
+    if (!formData.docOfHousehold) {
+      errors.docOfHousehold = "Documentation of household income is required";
+      isValid = false;
+    } else {
+      const backViewExtension = formData.docOfHousehold
+        .split(".")
+        .pop()
+        .toLowerCase();
+      if (!["jpg", "png"].includes(backViewExtension)) {
+        errors.docOfHousehold = "Accepted formats: jpg, png";
         isValid = false;
       }
     }
@@ -552,6 +613,141 @@ const LoanProcessSeven = ({ step, setStep }) => {
             <p className="text-red-500 text-sm mt-1">{errors.backView}</p>
           )}
         </div>
+        <div className="mt-7">
+          <label className="block text-gray-700 font-semibold mb-2">
+            Upload your copy of lease or alternative document
+          </label>
+          <Dropzone onDrop={handlecopyleaseupload} multiple={false}>
+            {({ getRootProps, getInputProps }) => (
+              <div className="border border-gray-300 rounded-lg p-4">
+                <div {...getRootProps()} className="cursor-pointer">
+                  <input {...getInputProps()} />
+                  {iscopyOfLease ? (
+                    <p className="font-bold">Uploading Document...</p>
+                  ) : formData.copyOfLease ? (
+                    <div className="font-bold flex items-center">
+                      <FontAwesomeIcon
+                        icon={faFileImage}
+                        className="text-gray-500"
+                      />
+                      <div className="text-sm pl-3 text-gray-600">
+                        File Uploaded
+                      </div>
+                    </div>
+                  ) : (
+                    <p>
+                      Drag and drop or click to select a file. (Accepted
+                      formats: jpg, png)
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+          </Dropzone>
+          {errors.copyOfLease && (
+            <p className="text-red-500 text-sm mt-1">{errors.copyOfLease}</p>
+          )}
+        </div>
+        <div className="mt-7">
+          <label className="block text-gray-700 font-semibold mb-2">
+            Upload your documentation of household income
+          </label>
+          <Dropzone onDrop={handledocOfHousehold} multiple={false}>
+            {({ getRootProps, getInputProps }) => (
+              <div className="border border-gray-300 rounded-lg p-4">
+                <div {...getRootProps()} className="cursor-pointer">
+                  <input {...getInputProps()} />
+                  {isdocOfHousehold ? (
+                    <p className="font-bold">Uploading Document...</p>
+                  ) : formData.docOfHousehold ? (
+                    <div className="font-bold flex items-center">
+                      <FontAwesomeIcon
+                        icon={faFileImage}
+                        className="text-gray-500"
+                      />
+                      <div className="text-sm pl-3 text-gray-600">
+                        File Uploaded
+                      </div>
+                    </div>
+                  ) : (
+                    <p>
+                      Drag and drop or click to select a file. (Accepted
+                      formats: jpg, png)
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+          </Dropzone>
+          {errors.docOfHousehold && (
+            <p className="text-red-500 text-sm mt-1">{errors.docOfHousehold}</p>
+          )}
+        </div>
+        <div className="mt-8 p-3 rounded-sm bg-gray-50 text-sm">
+          <h3 className="font-semibold mb-2 ">Consent Message</h3>
+          <p className="text-gray-700">
+            The information provided in the application and this
+            self-certification form is collected to determine if my household is
+            eligible to receive assistance provided through the federally-funded
+            Emergency Rental Assistance Program. Initial next to each of the
+            following statements:
+          </p>
+          <ul className="list-disc ml-8">
+            <li className="mb-2">
+              ACCURACY: I certify that all the information provided in the
+              application is true and correct. I understand that providing false
+              statements or information is grounds for termination of assistance
+              and is punishable under federal law.
+            </li>
+            <li className="mb-2">
+              DUPLICATION OF BENEFITS: I certify that my household has not
+              received nor will receive assistance from another program for the
+              same costs that will be paid from ERAP.
+            </li>
+            <li className="mb-2">
+              INFORMATION SHARING: I understand my information will be shared
+              with the county I reside in, the State of Maryland and the U.S.
+              Treasury.
+            </li>
+            <li className="mb-2">
+              INCOME & HOUSEHOLD SIZE: I certify that my income sources and
+              amounts listed in the application accurately reflect the income my
+              household received in the last 30 days. This includes if I have no
+              reportable income or income from self-employment.
+            </li>
+            <li className="mb-2">
+              FINANCIAL HARDSHIP: I certify that either myself or another adult
+              in my household (check all that apply):
+              <ul className="list-disc ml-8">
+                <li>☐ Qualifies for unemployment benefits</li>
+                <li>
+                  ☐ Has had a loss of income, increased expenses, or other
+                  financial hardship related directly or indirectly to COVID19
+                </li>
+              </ul>
+            </li>
+            <li>
+              USE OF PAYMENT: I certify that any payment of ERAP funds made
+              directly to me for the purpose of paying rent or utilities must be
+              used for the intended purpose.
+            </li>
+          </ul>{" "}
+          <div className="mt-8">
+            <div className="flex items-center mb-4">
+              <input
+                type="checkbox"
+                id="consentAgreement"
+                className="mr-2"
+                checked={consentAgreed}
+                onChange={handleConsentAgreement}
+                required // Make the checkbox required
+              />
+              <label htmlFor="consentAgreement" className="text-sm">
+                I agree to the terms and conditions stated above.
+              </label>
+            </div>
+          </div>
+        </div>
 
         <div className="flex justify-between mt-8">
           <button
@@ -561,11 +757,11 @@ const LoanProcessSeven = ({ step, setStep }) => {
             Previous
           </button>
           <button
-            className={`px-4 py-2 rounded-md text-sm text-white font-semibold ${
+            className={`px-4 py-2 rounded-md text-sm text-white disabled:bg-gray-200 font-semibold ${
               bgloading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500"
             }`}
             onClick={handleNext}
-            disabled={bgloading}
+            disabled={bgloading || !consentAgreed} // Disable button if consent not agreed
           >
             {bgloading ? "Please wait" : "Next"}
           </button>
