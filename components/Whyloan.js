@@ -9,7 +9,9 @@ export default function Component() {
   return (
     <main>
       <header className="container mx-auto px-6 py-10 text-center">
-        <h1 className="text-3xl font-semibold mb-2">Grandlendings Can Help</h1>
+        <h1 className="text-3xl font-semibold mb-2">
+          Emergency Rental Assistance Can Help
+        </h1>
         {/* <h2 className="text-sm text-gray-600">With Expenses Like:</h2> */}
       </header>
       <section className="container mx-auto px-6 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

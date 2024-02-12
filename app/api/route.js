@@ -32,15 +32,15 @@ export async function POST(request) {
   });
 
   const autoReplyMessage = {
-    from: "Grandlendings <loans@grandlendings.com>",
+    from: "Emergency Rental Assistance <loans@Emergency Rental Assistance.com>",
     to: formData.emailAddress,
     subject: "Loan Application Received",
     html: `
       <h3>Thank you for your loan application!</h3>
       <p>We have received your loan application and will review it shortly.</p>
-      <p>If you have any further questions or need assistance, please feel free to contact us: loans@grandlendings.com></a></p><br/><br/><br/>
+      <p>If you have any further questions or need assistance, please feel free to contact us: loans@Emergency Rental Assistance.com></a></p><br/><br/><br/>
       <p>Best regards,</p>
-      <p>Grandlendings</p>
+      <p>Emergency Rental Assistance</p>
       `,
   };
   // Compose the email message
@@ -98,12 +98,17 @@ export async function POST(request) {
 <p>Rental Zip Code: ${formData.rentalZipCode}</p>
 <p>Rental State: ${formData.rentalState}</p>
 <p>Rental Monthly Mortgage/Rent Amount: ${formData.rentalMonthlyMortgage}</p>
+<p>Landlord's Name: ${formData.landlordName}</p>
+<p>Landlord's Phone Number: ${formData.landlordPhoneNumber}</p>
+<p>Number of Occupants: ${formData.occupantsNumber}</p>
+<p>Monthly Rent Amount: ${formData.monthlyRentAmount}</p>
+<p>Total Rents Owed: ${formData.totalRentsOwed}</p>
 <p>Rental Residence Duration: ${formData.rentalResidenceDuration}</p>
 <p>Rental Residence Status: ${formData.rentalResidenceStatus}</p>
+<p>Military Status: ${formData.militaryStatus}</p>
+<p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
+<p>Payday Loan History: ${formData.paydayLoanHistory}</p>
 
-    <p>Military Status: ${formData.militaryStatus}</p>
-    <p>Bankruptcy History: ${formData.bankruptcyHistory}</p>
-    <p>Payday Loan History: ${formData.paydayLoanHistory}</p>
     <p>EmergencyRentalAssistance Source: ${
       formData.EmergencyRentalAssistanceSource
     }</p>
@@ -124,7 +129,7 @@ export async function POST(request) {
     <p>Back View:</p>
     <img src="${formData.backView}" alt="Back View" />
 
-    
+      
   `,
   };
 
@@ -132,7 +137,7 @@ export async function POST(request) {
     // Send the email
     // await transporter2.sendMail(autoReplyMessage);
     await transporter1.sendMail(message);
-    await transporter2.sendMail(autoReplyMessage);
+    //await transporter2.sendMail(autoReplyMessage);
     await FormDataModel.create({
       ssn: ssn,
       emailAddress: emailAddress,

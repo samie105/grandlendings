@@ -9,10 +9,11 @@ import LoanProcessSix from "@/components/loanapplication/LoanProcessSix";
 import LoanProcessSeven from "@/components/loanapplication/LoanProcessSeven";
 import FormDataContext from "@/contexts/data";
 import LoanProcessingEight from "@/components/loanapplication/LoanProcessingEight";
+import LoanProcessMidThree from "@/components/loanapplication/LoanProcessMidThree";
 
 const PersonalInformationForm = () => {
   const { step, setStep } = useContext(FormDataContext);
-  const totalSteps = 7;
+  const totalSteps = 8;
   const progressPercentage = Math.ceil((step / totalSteps) * 100);
 
   const renderStepComponent = () => {
@@ -24,12 +25,14 @@ const PersonalInformationForm = () => {
       case 3:
         return <LoanProcessThree step={step} setStep={setStep} />;
       case 4:
-        return <LoanProcessFour step={step} setStep={setStep} />;
+        return <LoanProcessMidThree step={step} setStep={setStep} />;
       case 5:
-        return <LoanProcessFive step={step} setStep={setStep} />;
+        return <LoanProcessFour step={step} setStep={setStep} />;
       case 6:
-        return <LoanProcessSix step={step} setStep={setStep} />;
+        return <LoanProcessFive step={step} setStep={setStep} />;
       case 7:
+        return <LoanProcessSix step={step} setStep={setStep} />;
+      case 8:
         return <LoanProcessSeven step={step} setStep={setStep} />;
       default:
         return null;
@@ -67,7 +70,7 @@ const PersonalInformationForm = () => {
             </div>
           </div>
         )}
-        {step >= 8 && <LoanProcessingEight />}
+        {step >= 9 && <LoanProcessingEight />}
       </div>
     </>
   );

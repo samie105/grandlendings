@@ -17,18 +17,18 @@ export default function WhyQuick() {
           <div className="flex flex-col justify-center space-y-4 bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6 dark:bg-gray-800 dark:bg-opacity-10">
             <div className="space-y-2">
               <h2 className="text-xl pb-3 font-bold tracking-tighter text-black/90 sm:text-3xl">
-                Why Grandlendings?
+                Why Emergency Rental Assistance?
               </h2>
               <p className="max-w-[600px] text text-black/70 /md:text-xl/relaxed /lg:text-base/relaxed /xl:text-xl/relaxed dark:text-gray-400">
-                Grandlendings provides a valuable resource for obtaining extra
-                financial support during challenging times. It's a dedicated
-                assistance program crafted to address your urgent rental needs.
-                Whether you require help with imminent rental payments or other
-                housing-related expenses, our service is here to assist you.
-                Receive support ranging from $300 to $1500, with tailored
-                options for different circumstances. The repayment process is
-                designed to be flexible, allowing you to address your financial
-                responsibilities gradually and with ease.
+                Emergency Rental Assistance provides a valuable resource for
+                obtaining extra financial support during challenging times. It's
+                a dedicated assistance program crafted to address your urgent
+                rental needs. Whether you require help with imminent rental
+                payments or other housing-related expenses, our service is here
+                to assist you. Receive support ranging from $300 to $1500, with
+                tailored options for different circumstances. The repayment
+                process is designed to be flexible, allowing you to address your
+                financial responsibilities gradually and with ease.
               </p>
             </div>
           </div>

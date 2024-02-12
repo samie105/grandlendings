@@ -77,6 +77,11 @@ export const FormDataProvider = ({ children }) => {
           rentalmonthlyMortgage: "",
           rentalresidenceDuration: "",
           rentalresidenceStatus: "",
+          landlordName: "",
+          landlordPhoneNumber: "",
+          occupantsNumber: "",
+          monthlyRentAmount: "",
+          totalRentsOwed: "",
         }
       );
 

@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col space-y-4">
           <div className="LogoSide font-bold lg:pl-3 ">
             <Image
-              src="/assets/USDT1.png"
+              src="/assets/USRAP.png"
               alt=""
               width={1000}
               height={1000}
@@ -22,7 +22,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Contact Details</h3>
           <div className="flex items-center space-x-2">
             <MailIcon className="h-5 w-5 text-gray-300" />
-            <span>support@grandlendings.com</span>
+            <span>support@emergencyrentalassistance.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <PhoneIcon className="h-5 w-5 text-gray-300" />
@@ -30,7 +30,10 @@ export default function Footer() {
           </div>
           <div className="flex items-center space-x-2 text-sm w-full">
             <LocateIcon className="h-5 w-5 text-gray-300" />
-            <span>Grandlendings, PO Box 630, Los Angeles, CA 90074-9399</span>
+            <span>
+              Emergency Rental Assistance, PO Box 630, Los Angeles, CA
+              90074-9399
+            </span>
           </div>
         </div>
         {/* <div className="flex flex-col space-y-4">
